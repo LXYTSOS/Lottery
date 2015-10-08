@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="com.lxy.hibernate">
+       <class name="Forecast" table="tb_forecast"><!-- name指定持久化类的包名和类名，table指定数据库中的表名 -->
+          <id name="id" column="id" type="int" >
+             <generator class="native" /> <!--确定id为主键，增量为１-->
+          </id>
+          <property name="phase" column="phase" type="string" />
+          <property name="red_1" column="red_1" type="int" />
+          <property name="red_2" column="red_2" type="int"/>
+          <property name="red_3" column="red_3" type="int"/>
+          <property name="red_4" column="red_4" type="int"/>
+          <property name="red_5" column="red_5" type="int"/>
+          <property name="red_6" column="red_6" type="int"/>
+          <property name="blue" column="blue" type="int"/>
+          <property name="lucky_blue" column="lucky_blue" type="int"/>
+       </class>
+    </hibernate-mapping>
